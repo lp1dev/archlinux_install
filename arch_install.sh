@@ -30,7 +30,7 @@ pacstrap /mnt base base-devel
 #generating fstab
 echo "generating fstab"
 genfstab -U -p /mnt >> /mnt/etc/fstab
-curl http://lp1.eu/public/arch_conf.sh > /mnt/arch_conf.sh
+curl https://raw.githubusercontent.com/lp1dev/archlinux_install/master/arch_conf.sh  > /mnt/arch_conf.sh
 
 #chrooting inside the created system
 arch-chroot /mnt sh ./arch_conf.sh
